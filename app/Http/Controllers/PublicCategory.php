@@ -10,7 +10,7 @@ class PublicCategory extends Controller
     public function show()
     {
         return view('layouts.products-index', [
-            'categories' => Category::where('published' , '=', '1')->paginate(5)
+            'categories' => Category::where('published', '=', '1')->paginate(5),
         ]);
     }
 }

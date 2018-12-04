@@ -12,10 +12,12 @@ class Category extends Model
 
     public function setSlugAttribute($value)
     {
-        $this->attributes['slug'] = Str::slug(mb_substr($this->title , 0, 40)) . '-' . \Carbon\Carbon::now()->format('dmyHi');
+        $this->attributes['slug'] = Str::slug(mb_substr($this->title, 0,
+                40)).'-'.\Carbon\Carbon::now()->format('dmyHi');
     }
+
     public function children()
     {
-        return $this->hasMany(self::class,'parent_id');
+        return $this->hasMany(self::class, 'parent_id');
     }
 }
