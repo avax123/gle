@@ -2,6 +2,7 @@
 
 namespace App;
 
+use http\Env\Request;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -20,7 +21,7 @@ class User extends Authenticatable
         'email',
         'password',
     ];
-
+    protected $user_id;
     /**
      * The attributes that should be hidden for arrays.
      * @var array
@@ -29,4 +30,17 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    static function hasRole(Request $request)
+    {
+
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUserId()
+    {
+        return $this->user_id;
+    }
 }
