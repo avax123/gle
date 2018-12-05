@@ -30,7 +30,8 @@ class CategoryController extends Controller
     {
         return view('admin.categories.create', [
             'category'   => [],
-            'categories' => Category::with('children')->where('parent_id', 0)->get(),
+            'categories' => Category::with('children')->where('parent_id', 0)
+                                    ->get(),
             'delimiter'  => '',
         ]);
     }
@@ -74,7 +75,8 @@ class CategoryController extends Controller
     {
         return view('admin.categories.edit', [
             'category'   => $category,
-            'categories' => Category::with('children')->where('parent_id', 0)->get(),
+            'categories' => Category::with('children')->where('parent_id', 0)
+                                    ->get(),
             'delimiter'  => '',
         ]);
     }

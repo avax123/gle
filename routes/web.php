@@ -19,7 +19,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['admin']], function () {
+Route::group(['prefix'     => 'admin',
+              'namespace'  => 'Admin',
+              'middleware' => ['admin'],
+], function () {
     Route::get('/', 'DashboardController@dashboard')->name('admin.index');
     Route::resource('/category', 'CategoryController', ['as' => 'admin']);
 });
