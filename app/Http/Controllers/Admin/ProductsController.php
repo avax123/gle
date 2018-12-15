@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+
 //dildo usssd
 use App\Category;
 use App\Products;
@@ -44,6 +45,7 @@ class ProductsController extends Controller
         );
     }
 //huisos
+
     /**
      * Store a newly created resource in storage.
      *
