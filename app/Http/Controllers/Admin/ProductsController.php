@@ -19,10 +19,14 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return view('admin.products.show-products', [
-            'products' => Products::orderBy('id', 'DESC')->paginate(5),
-        ]);
+        return view(
+            'admin.products.show-products',
+            [
+                'products' => Products::orderBy('id', 'DESC')->paginate(5),
+            ]
+        );
     }
+    //penis
 
     /**
      * Show the form for creating a new resource.
@@ -30,11 +34,14 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        return view('admin.products.create-products', [
-            'product'  => [],
-            'products' => Category::with('children')->where('parent_id', 0)
-                                  ->get(),
-        ]);
+        return view(
+            'admin.products.create-products',
+            [
+                'product'  => [],
+                'products' => Category::with('children')->where('parent_id', 0)
+                                      ->get(),
+            ]
+        );
     }
 
     /**
@@ -47,6 +54,7 @@ class ProductsController extends Controller
     public function store(Request $request)
     {
         Products::create($request->all());
+
         return redirect()->route('admin.products.index');
     }
 
