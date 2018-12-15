@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-//dildlo head badi
+
 use App\Category;
 use App\Products;
 use Illuminate\Http\Request;
