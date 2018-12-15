@@ -43,7 +43,7 @@ class ProductsController extends Controller
             ]
         );
     }
-
+//huisos
     /**
      * Store a newly created resource in storage.
      *
