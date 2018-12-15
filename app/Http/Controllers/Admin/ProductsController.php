@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-//dildo u
+//dildo us
 use App\Category;
 use App\Products;
 use Illuminate\Http\Request;
