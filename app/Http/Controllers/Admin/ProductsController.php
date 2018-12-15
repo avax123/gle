@@ -30,7 +30,7 @@ class ProductsController extends Controller
 
     /**
      * Show the form for creating a new resource.
-     *ssssssss dildo head
+     *ssssssss dildo head and dick
      */
     public function create()
     {
