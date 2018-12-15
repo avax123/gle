@@ -3,7 +3,6 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Auth;
 
 class roleAccess
@@ -18,7 +17,7 @@ class roleAccess
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::user()->user_role == 'admin') {
+        if (isset(Auth::user()->user_role) && Auth::user()->user_role == 'admin') {
             return $next($request);
         } else {
             return redirect('/');

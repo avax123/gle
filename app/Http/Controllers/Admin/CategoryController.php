@@ -16,8 +16,9 @@ class CategoryController extends Controller
      */
     public function index()
     {
+
         return view('admin.categories.index', [
-            'categories' => Category::paginate(5),
+            'categories' => Category::orderBy('id', 'DESC')->paginate(5),
         ]);
     }
 
@@ -59,8 +60,11 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        return view('layouts.products-index', [
-            'categories' => Category::where('publised', '=', '1')->paginate(5),
+        return view('admin.categories.show', [
+            'category'   => $category,
+            'categories' => Category::with('children')->where('parent_id', 0)
+                                    ->get(),
+            'delimiter'  => '',
         ]);
     }
 

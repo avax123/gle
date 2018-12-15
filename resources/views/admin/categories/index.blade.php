@@ -17,7 +17,7 @@
     <tbody>
     @forelse($categories as $category)
         <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action active">
+            <a href="{{route('admin.category.show', $category)}}" class="list-group-item list-group-item-action active">
                 {{$category->title}}
                 <span class="badge badge-primary badge-pill">{{$category->published}}</span>
             </a>

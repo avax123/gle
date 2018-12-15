@@ -16,25 +16,14 @@
             </li>
             <ul class="sub-menu collapse" id="products">
                 <li class="active"><a href="{{route('admin.category.index')}}">All Categories</a></li>
-                <li><a href="#">General</a></li>
-                <li><a href="#">Buttons</a></li>
-                <li><a href="#">Tabs & Accordions</a></li>
-                <li><a href="#">Typography</a></li>
-                <li><a href="#">FontAwesome</a></li>
-                <li><a href="#">Slider</a></li>
-                <li><a href="#">Panels</a></li>
-                <li><a href="#">Widgets</a></li>
-                <li><a href="#">Bootstrap Model</a></li>
             </ul>
 
 
             <li data-toggle="collapse" data-target="#service" class="collapsed">
-                <a href="#"><i class="fa fa-globe fa-lg"></i> Services <span class="arrow"></span></a>
+                <a href="#"><i class="fa fa-globe fa-lg"></i> Products <span class="arrow"></span></a>
             </li>
             <ul class="sub-menu collapse" id="service">
-                <li>New Service 1</li>
-                <li>New Service 2</li>
-                <li>New Service 3</li>
+                <li><a href="{{route('admin.products.index')}}">All Products</a></li>
             </ul>
 
 

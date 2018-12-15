@@ -3,16 +3,25 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
+/**
+ * @method static orderBy(string $string, string $string1)
+ * @method static create(array $all)
+ */
 class Products extends Model
 {
-    /**
-     * Products constructor.
-     *
-     * @param array $attributes
-     */
-    function __construct(array $attributes = [])
+    protected $fillable
+        = [
+            'Name',
+            'description',
+            "price",
+            'parent_id',
+            'published',
+        ];
+
+    public function children()
     {
-        parent::__construct($attributes);
+        return $this->hasMany(Category::class, 'parent_id');
     }
 }

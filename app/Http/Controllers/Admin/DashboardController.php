@@ -9,8 +9,6 @@ class DashboardController extends Controller
 {
     public function dashboard(Request $request)
     {
-        $request->input('name');
-
         return view('admin.dashboard');
     }
 }

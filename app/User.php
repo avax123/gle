@@ -22,7 +22,7 @@ class User extends Authenticatable
             'email',
             'password',
         ];
-    protected $user_id;
+
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -34,16 +34,4 @@ class User extends Authenticatable
             'remember_token',
         ];
 
-    static function hasRole(Request $request)
-    {
-
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getUserId()
-    {
-        return $this->user_id;
-    }
 }
