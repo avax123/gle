@@ -10669,6 +10669,7 @@ a.text-dark:focus {
 body {
   margin: 0px;
   padding: 0px;
+  top: 0;
 }
 
 .bg-dark {
@@ -10680,7 +10681,7 @@ body {
     position: relative;
     width: 100%;
     margin-bottom: 10px;
-    height: auto;
+    height: 100%;
   }
 }
 
